@@ -274,10 +274,10 @@ function processTextElement(inSrc, txt) {
       }
     }
     if (txt.isBold(off)) {
-      var d1 = d2 = "**";
+      var d1 = d2 = "*";
       if (txt.isItalic(off)) {
         // edbacher: changed this to handle bold italic properly.
-        d1 = "**_"; d2 = "_**";
+        d1 = "*_"; d2 = "_*";
       }
       pOut=pOut.substring(0, off)+d1+pOut.substring(off, lastOff)+d2+pOut.substring(lastOff);
     } else if (txt.isItalic(off)) {
